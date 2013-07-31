@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+{% code %}
+title = "Bigrams Analysis"
+{% end %}
+
+<head>
+<style>
+
+.node {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+.link {
+  stroke: #999;
+  stroke-opacity: .6;
+}
+</style>
+<title> {{ title }}</title>
+<link rel="stylesheet" href="/css/bootstrap.min.css?v=2.3.1">
+<link rel="stylesheet" href="/css/font-awesome.min.css?v=3.0">
+<link rel="stylesheet" href="base.css">
+
+</head>
+<body>
+<header>
+<div class="container">
+    <h1><a href="."><i style="opacity:0.8" class="icon-home"></i></a>{{ title }}</h1>
+    <div class="gramenerlogo"></div>
+ </div>
+</header>
+
+<div class="container network">
+    <script src="js/d3.v3.min.js"></script>
+    <script src="network_diagram.js"></script>
+</div>
+</body>
+</html>

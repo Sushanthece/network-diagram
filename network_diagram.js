@@ -8,7 +8,7 @@ var force = d3.layout.force()
     .linkDistance(25)
     .size([width, height]);
 
-var svg = d3.select(".network").append("svg")
+var svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height);
 
