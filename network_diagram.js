@@ -4,8 +4,8 @@ var width = 940,
 var color = d3.scale.category20c();
 
 var force = d3.layout.force()
-    .charge(-10)
-    .linkDistance(250)
+    .charge(-80)
+    .linkDistance(25)
     .size([width, height]);
 
 var svg = d3.select("body").append("svg")
