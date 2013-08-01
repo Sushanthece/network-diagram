@@ -4,11 +4,11 @@ var width = 940,
 var color = d3.scale.category20c();
 
 var force = d3.layout.force()
-    .charge(-80)
-    .linkDistance(25)
+    .charge(-50)
+    .linkDistance(20)
     .size([width, height]);
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select(".network").append("svg")
     .attr("width", width)
     .attr("height", height);
 
@@ -27,13 +27,13 @@ nodes.forEach(function(o) {
   force
       .nodes(nodes)
       .links(links)
-      .start(100);
+      .start(10);
 
   var link = svg.selectAll(".link")
       .data(links)
     .enter().append("line")
       .attr("class", "link")
-      .style("stroke-width", function(d) { return Math.pow(d.value,0.15); });
+      .style("stroke-width", function(d) { return Math.pow(d.value,0.05); });
 
   var node = svg.selectAll(".node")
       .data(nodes)
